@@ -17,8 +17,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
 
       # Runs a single command using the runners shell
+      - name: Run Python
+        run: python -c "print('Line 1')"
+      
       - name: Run a one-line script
         run: echo Hello, world!
 
